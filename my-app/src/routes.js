@@ -11,7 +11,7 @@ export const Routes = (props) => {
 			<Route exact path='/' component={Main} />
 			<Route exact path='/categories' component={Categories} />
             <Route exact path='/add' component={Add} />
-            <Route exact path='/recipe' component={Recipe} />
+            <Route exact path='/categories/recipe/:id' component={Recipe} />
 		</Switch>
 	)
 }
