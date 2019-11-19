@@ -1,14 +1,22 @@
-body {
+/* body {
     background-image: url("https://i.imgur.com/34Hkh1u.jpg");
     background-position: top;
     background-repeat: no-repeat;
     width: 100vw;
-}
+} */
 
 .block {
     background-color: rgba(90,66,93,.6);
     width: 100vw;
     height: 100vh;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://i.imgur.com/34Hkh1u.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 .main {
