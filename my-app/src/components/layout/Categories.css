@@ -19,11 +19,11 @@
     background-color: #BE006F;
     color: white;
     width: 100%;
-    border: 2px solid green;
 }
 
 .previewName {
     height: 100%;
+    text-align: center;
 
 }
 
@@ -31,4 +31,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
 }

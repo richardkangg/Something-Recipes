@@ -6,12 +6,12 @@ import Add from './components/Add'
 import Recipe from './components/Recipe'
 
 export const Routes = (props) => {
-	return (
-		<Switch>
-			<Route exact path='/' component={Main} />
-			<Route exact path='/categories' component={Categories} />
+    return (
+        <Switch>
+            <Route exact path='/' component={Main} />
+            <Route exact path='/categories' component={Categories} />
             <Route exact path='/add' component={Add} />
             <Route exact path='/categories/recipe/:id' component={Recipe} />
-		</Switch>
-	)
+        </Switch>
+    )
 }

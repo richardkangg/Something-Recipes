@@ -2,22 +2,27 @@
     width: 500px;
     height: 30px;
     background-color: #5A425D;
+    margin-top: -40px;
 }
 
 input.searchBar::-webkit-input-placeholder {
     font-size: 20px;
     color: white;
     padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0 70px 20px 70px;
+    margin-bottom: 70px;
 }
 
-.nav {
+/* .nav {
     width: 75px;
     height: 75px;
     background-color: #B9AABA;
-}
+} */

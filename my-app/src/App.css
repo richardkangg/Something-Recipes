@@ -20,3 +20,48 @@
 .App-link {
   color: #09d3ac;
 }
+
+nav {
+  display: absolute;
+  margin-top: -189px;
+  width: 350px;
+}
+
+nav:hover {
+  animation-name: navSlider;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+}
+
+
+.linkBox {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: flex-end;
+  padding: 40px;
+  background-color: #B9AABA;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+
+.navButton {
+  width: 75px;
+  height: 75px;
+  background-color: #B9AABA;
+  margin-left: 75px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes navSlider {
+  0% {margin-top: -189px;}
+  100% {margin-top: 0;}
+}

@@ -1,0 +1,45 @@
+.recipe-container {
+    font-family: 'Raleway', sans-serif;
+}
+
+.recipe-container img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    margin: 10px 0 20px 0;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #BE006F;
+    width: 800px;
+    margin: auto;
+    border-radius: 30px 30px 0 0;
+    color: white;
+}
+
+.recipe h1 {
+    text-align: center;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+}
+
+.time p {
+    padding: 0 20px 0 20px;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.recipe p {
+    font-weight: bold;
+}
+
+.recipe li {
+    font-weight: bold;
+}
+

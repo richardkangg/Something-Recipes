@@ -7,11 +7,11 @@ function Main() {
             <div className="block">
                 <div className="main">
                     <h1>Something Recipes</h1>
-                    <input className="search" placeholder="testing" />
+                    <input className="search" placeholder="SEARCH" />
+                </div>
             </div>
-            </div>
-            </div>
+        </div>
     );
-          }
-          
-          export default Main;        
+}
+
+export default Main;        

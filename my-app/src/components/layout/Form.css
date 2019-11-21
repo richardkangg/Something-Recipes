@@ -1,0 +1,34 @@
+.mainform {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 30px;
+    background-color: #5A425D;
+    border-radius: 25px 25px 0 0;
+    align-items: center;
+}
+
+.mainform input {
+    margin: 20px;
+    width: 500px;
+}
+
+.mainform .ingredients {
+    height: 100px;
+}
+
+.mainform .directions {
+    height: 100px;
+}
+
+.mainform button {
+    width: 70px;
+}
+
+.mainform h3 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: white;
+    margin: 0 0 20px 0;
+}

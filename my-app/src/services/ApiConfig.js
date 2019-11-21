@@ -1,6 +1,6 @@
 import Axios from 'axios'
 const mockURL = `https://5dced56e75f9360014c26410.mockapi.io/`
-const infoURL = 'https://api.edamam.com/api/nutrition-details'
+const wineURL = 'https://api.spoonacular.com/food/wine/pairing/'
 
 export const api = Axios.create({
 	baseURL: mockURL,
@@ -8,10 +8,9 @@ export const api = Axios.create({
 	}
 })
 
-export const infoApi = Axios.create({
-	baseURL: infoURL,
+export const wineApi = Axios.create({
+	baseURL: wineURL,
 	headers: {
-		
 	}
 })
 

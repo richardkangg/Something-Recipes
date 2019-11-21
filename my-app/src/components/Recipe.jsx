@@ -1,8 +1,8 @@
 import React from 'react';
 import './layout/Recipe.css';
-import Categories from './Categories';
-import { api, infoApi } from '../services/ApiConfig';
-
+import { api, wineApi } from '../services/ApiConfig';
+import Navigation from './Navigation';
+import Axios from 'axios';
 
 
 class Recipe extends React.Component {
@@ -15,13 +15,14 @@ class Recipe extends React.Component {
             prepTime: '',
             cookTime: '',
             image: '',
-            info: '',
+            wines: [],
+            text: '',
+            matches: ''
         };
     }
 
     componentDidMount() {
         this.getRecipeId()
-        this.fetchInfo()
     }
 
     getRecipeId = async () => {
@@ -37,39 +38,77 @@ class Recipe extends React.Component {
                 cookTime: rec.data.cookTime,
                 image: rec.data.image
             })
+            this.getWines()
         } catch (error) {
             console.error(error)
         }
     }
 
-    fetchInfo = async () => {
+    getWines = async () => {
         try {
             const params = {
-                app_id: 'a5a5f4a6',
-                app_key: '3c9690f040fa0d8c5bdc4ddfe5c3e5f5'
+                food: this.state.name
             }
-            const info = await infoApi.post('/', null, { params })
-            console.log(info)
-            this.setState({ info: info.data.calories })
+
+            Axios.get('https://api.spoonacular.com/food/wine/pairing?apiKey=f3dfbdd9a9234afdb5841412b40f2b5a', { params })
+                .then(res => {
+                    if (res.data.status !== "failure") {
+                        this.setState({
+                            matches: res.data.productMatches[0].title,
+                            wines: res.data.pairedWines,
+                            text: res.data.pairingText
+                        })
+                    }
+                    else {
+                        this.setState({
+                            wines: 'No wine pairings found.',
+                            text: '',
+                            matches: ''
+                        })
+                    }
+                })
         } catch (error) {
-            console.error(error)
+            this.setState({
+                wines: 'No wine pairings found.',
+                text: '',
+                matches: ''
+            })
         }
     }
+
+    renderList = () => this.state.ingredients.map((each) => (
+        <li>{each}</li>
+    ))
+    renderDirections = () => this.state.directions.map((each) => (
+        <li>{each}</li>
+    ))
 
 
     render() {
-        const { name, ingredients, directions, prepTime, cookTime, image } = this.state
+        const { name, ingredients, directions, prepTime, cookTime, image, wines, text, matches } = this.state
         return (
             <div className="recipe-container">
+                <Navigation />
                 <img src={image} />
                 <div className="recipe">
                     <h1>{name}</h1>
                     <div className='time'>
-                        <p>Prep Time: {prepTime}</p>
-                        <p>Cook Time: {cookTime}</p>
+                        <p>Prep Time: {prepTime}min</p>
+                        <p>Cook Time: {cookTime}min</p>
                     </div>
-                    <p>Ingredients: {ingredients}</p>
-                    <p>Directions: {directions}</p>
+                    <p>Ingredients:</p>
+                    <ul>
+                        {this.renderList()}
+                    </ul>
+                    <p>Directions:</p>
+                    <ul>
+                        {this.renderDirections()}
+                    </ul>
+                    <div className="wine-container">
+                        <h2>Wines to pair with: {wines.toString()}</h2>
+                        <p>{text}</p>
+                        <h2>Suggestion: {matches}</h2>
+                    </div>
                 </div>
             </div>
         );
