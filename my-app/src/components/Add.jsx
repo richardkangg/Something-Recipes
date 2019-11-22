@@ -35,7 +35,6 @@ export default class Add extends Component {
     }
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value })
-
     render() {
         const { name, ingredients, directions, cookTime, prepTime, image } = this.state
         return (
