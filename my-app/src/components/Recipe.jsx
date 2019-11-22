@@ -90,13 +90,12 @@ class Recipe extends React.Component {
             <div className="recipe-container">
                 <Navigation />
                 <div className="imageTitle">
-                <img src={image} />
-                <div className="titleOverlay">
-                <h1>{name}</h1>
-                </div>
+                    <img src={image} />
+                    <div className="titleOverlay">
+                        <h1>{name}</h1>
+                    </div>
                 </div>
                 <div className="recipe">
-                    {/* <h1>{name}</h1> */}
                     <div className='time'>
                         <p>Prep Time: {prepTime}min</p>
                         <p>Cook Time: {cookTime}min</p>
@@ -109,11 +108,11 @@ class Recipe extends React.Component {
                     <ul>
                         {this.renderDirections()}
                     </ul>
-                    <div className="wine-container">
-                        <h2>Wines to pair with: {wines.toString()}</h2>
-                        <p>{text}</p>
-                        <h2>Suggestion: {matches}</h2>
-                    </div>
+                </div>
+                <div className="wine-container">
+                    <h2>Wines to pair with: {wines.toString()}</h2>
+                    <p>{text}</p>
+                    <h2>Suggestion: {matches}</h2>
                 </div>
             </div>
         );
