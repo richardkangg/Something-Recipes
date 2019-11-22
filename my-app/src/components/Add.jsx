@@ -23,11 +23,11 @@ export default class Add extends Component {
         const { name, ingredients, directions, prepTime, cookTime, image } = this.state
         const data = {
             name,
-            ingredients: [],
-            directions: [],
-            prepTime: '',
-            cookTime: '',
-            image: '',
+            ingredients,
+            directions,
+            prepTime,
+            cookTime,
+            image,
         }
         api.post('/recipes', data)
             .then((res) => res.status === 201 ? this.props.history.push('/recipes') : null)
