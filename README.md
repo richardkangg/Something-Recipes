@@ -5,9 +5,7 @@ As our second project at General Assembly's Software Engineering Immersive (SEI)
 
 [Something Recipes Website](http://something-recipes.surge.sh/)
 
-![alt text][site]
-
-[site]: https://i.imgur.com/sZgieih.gif "Something Recipes Site Demo"
+![Something Recipes Site Demo](https://i.imgur.com/sZgieih.gif)
 
 ## This Project Uses:
 - React.js
