@@ -32,3 +32,41 @@
     color: white;
     margin: 0 0 20px 0;
 }
+
+@media (max-width: 500px) {
+    .mainform {
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        padding: 30px;
+        background-color: #5A425D;
+        border-radius: 25px 25px 0 0;
+        align-items: center;
+    }
+    
+    .mainform input {
+        margin: 20px;
+        width: 70vw;
+    }
+    
+    .mainform .ingredients {
+        height: 100px;
+    }
+    
+    .mainform .directions {
+        height: 100px;
+    }
+    
+    .mainform button {
+        width: 70px;
+        background-color: white;
+    }
+    
+    .mainform h3 {
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        font-size: 50px;
+        color: white;
+        margin: 0 0 20px 0;
+    }
+}

@@ -42,7 +42,6 @@ export default class Add extends Component {
             <div className="add">
             <Navigation />
             <div className="addForm">
-                {/* <h3>Add Recipe</h3> */}
                 <Form
                     formData={{ name, ingredients, directions, prepTime, cookTime, image }}
                     onChange={this.handleChange}

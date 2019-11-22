@@ -89,9 +89,14 @@ class Recipe extends React.Component {
         return (
             <div className="recipe-container">
                 <Navigation />
+                <div className="imageTitle">
                 <img src={image} />
+                <div className="titleOverlay">
+                <h1>{name}</h1>
+                </div>
+                </div>
                 <div className="recipe">
-                    <h1>{name}</h1>
+                    {/* <h1>{name}</h1> */}
                     <div className='time'>
                         <p>Prep Time: {prepTime}min</p>
                         <p>Cook Time: {cookTime}min</p>

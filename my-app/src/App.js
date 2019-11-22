@@ -18,7 +18,9 @@ function App() {
           Add
         </NavLink>
         </div>
-        <div className="navButton"></div>
+        <div className="navButton">
+          <h1>=</h1>
+        </div>
       </nav>
       <Routes />
     </div>
